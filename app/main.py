@@ -1,9 +1,21 @@
 import streamlit as st
 from prediction_helper import predict  # Ensure this is correctly linked to your prediction_helper.py
+import matplotlib.pyplot as plt
 
 # Set the page configuration and title
 st.set_page_config(page_title="Credit Risk Modelling", page_icon="📊")
 st.title("Credit Risk Modelling")
+st.markdown(
+    "<style>h1{color:blue; text-align: center;}</style>",
+    unsafe_allow_html=True
+)
+st.sidebar.title("Project Details")
+st.sidebar.markdown("""
+- **Project:** Credit Risk Modelling  
+- **Model:** Logistic Regression / XGBoost  
+- **Purpose:** Predict default probability and credit score  
+- **Tech Stack:** Python, Streamlit, Scikit-learn, XGBoost, Mlflow, Optuna 
+""")
 
 # Create rows of three columns each
 row1 = st.columns(3)
