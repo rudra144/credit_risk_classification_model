@@ -1,15 +1,14 @@
-Your project directory appears well-structured. Based on this, I have updated the **README.md** file to reflect the existing folder structure accurately.
 
 ---
 
 # **Credit Risk Prediction - README** 
 
-## **📌 Project Overview**
+## ** Project Overview**
 This project focuses on **predicting credit risk** by identifying **loan defaulters** using **historical financial data**. Leveraging **machine learning models**, the system helps financial institutions make **data-driven lending decisions**.
 
 ---
 
-## **📂 Project Structure**
+## ** Project Structure**
 ```
 📁 credit_risk_prediction/
 │── 📁 .devcontainer/             # Development container settings
@@ -73,17 +72,17 @@ git clone https://github.com/your-repo/credit-risk-model.git
 cd credit-risk-model
 ```
 
-### **2️⃣ Install Dependencies**
+### **2️ Install Dependencies**
 ```bash
 pip install -r requirements.txt
 ```
 
-### **3️⃣ Run Model Training**
+### **3️ Run Model Training**
 ```bash
 python train_model.py
 ```
 
-### **4️⃣ Make Predictions**
+### **4️ Make Predictions**
 ```bash
 python predict.py --input data/sample_input.csv
 ```
