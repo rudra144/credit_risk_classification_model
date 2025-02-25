@@ -48,38 +48,7 @@ FastAPI provides an **interactive API documentation** at `/docs`.
 │── credit_risk_model.ipynb       # Jupyter Notebook for model training & evaluation
 │── requirements.txt              # Required dependencies
 ```
-2️⃣ Predict Credit Risk
-Endpoint: /predict
-Method: POST
-Request Format: JSON
-Response Format: JSON
-Content-Type: application/json
-Sample JSON Request from UI
-json
-Copy
-Edit
-{
-  "age": 35,
-  "income": 55000,
-  "loan_amount": 20000,
-  "loan_tenure_months": 60,
-  "avg_dpd_per_delinquency": 2.5,
-  "delinquency_ratio": 0.12,
-  "credit_utilization_ratio": 0.45,
-  "num_open_accounts": 5,
-  "residence_type": "Owned",
-  "loan_purpose": "Home Renovation",
-  "loan_type": "Personal Loan"
-}
-Sample JSON Response
-json
-Copy
-Edit
-{
-  "default_probability": 0.0614273543330177,
-  "credit_score": 809,
-  "rating": "Excellent"
-}
+
 3️⃣ UI to API Flow
 User Inputs Data → UI collects borrower details.
 UI Sends JSON Request → The UI formats input data as JSON and sends a POST request to /predict.
