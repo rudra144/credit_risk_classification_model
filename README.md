@@ -48,18 +48,69 @@ FastAPI provides an **interactive API documentation** at `/docs`.
 │── credit_risk_model.ipynb       # Jupyter Notebook for model training & evaluation
 │── requirements.txt              # Required dependencies
 ```
+Your README formatting seems cluttered and difficult to read due to:
 
-3️⃣ UI to API Flow
-User Inputs Data → UI collects borrower details.
-UI Sends JSON Request → The UI formats input data as JSON and sends a POST request to /predict.
-API Processes Data → The API applies a machine learning model to predict risk.
-API Returns JSON Response → The UI receives the risk assessment and displays the result.
-4️⃣ Example UI Request Using Fetch API
-If your UI is built with JavaScript, you can send data to the API using Fetch:
+1. **Lack of proper sectioning** – Headers should be clear and consistently formatted.
+2. **Improper JSON and code block formatting** – Code should be inside proper fenced code blocks (` ```json `, ` ```bash `, etc.).
+3. **Markdown syntax issues** – Numbers (`2`, `3`, `4`, etc.) appearing unintentionally.
+4. **Overloaded inline text** – Long lines of text make it difficult to follow.
 
-javascript
-Copy
-Edit
+---
+
+### **🚀 Cleaned-Up README Structure**
+
+Here's an improved version of your **API Documentation** section:
+
+```markdown
+## API Documentation
+
+### **1️⃣ Predict Credit Risk Endpoint**
+**Endpoint:** `/predict`  
+**Method:** `POST`  
+**Request Format:** `JSON`  
+**Response Format:** `JSON`  
+**Content-Type:** `application/json`  
+
+#### **📌 Example JSON Request (From UI)**
+```json
+{
+  "age": 35,
+  "income": 55000,
+  "loan_amount": 20000,
+  "loan_tenure_months": 60,
+  "avg_dpd_per_delinquency": 2.5,
+  "delinquency_ratio": 0.12,
+  "credit_utilization_ratio": 0.45,
+  "num_open_accounts": 5,
+  "residence_type": "Owned",
+  "loan_type": "Personal Loan",
+  "loan_purpose": "Home Renovation"
+}
+```
+
+#### **📌 Example JSON Response**
+```json
+{
+  "default_probability": 0.0614273543330177,
+  "credit_score": 809,
+  "rating": "Excellent"
+}
+```
+
+---
+
+### **2️⃣ UI to API Flow**
+1. **User Inputs Data** → UI collects borrower details.
+2. **UI Formats JSON Request** → UI sends a `POST` request to `/predict`.
+3. **API Processes Data** → The API applies a machine learning model to assess risk.
+4. **API Returns JSON Response** → UI receives the risk assessment and displays the result.
+
+---
+
+### **3️⃣ Example Request Using Fetch API**
+If your UI is built with JavaScript, you can send data to the API using `fetch`:
+
+```javascript
 fetch("http://localhost:8000/predict", {
   method: "POST",
   headers: { "Content-Type": "application/json" },
@@ -80,32 +131,61 @@ fetch("http://localhost:8000/predict", {
 .then(response => response.json())
 .then(data => console.log(data))
 .catch(error => console.error("Error:", error));
-5️⃣ cURL Request for Testing
+```
+
+---
+
+### **4️⃣ Example Request Using cURL**
 If you want to test the API from the terminal, run:
 
-bash
-Copy
-Edit
-curl -X 'POST' \
-  'http://localhost:8000/predict' \
-  -H 'accept: application/json' \
-  -H 'Content-Type: application/json' \
-  -d '{
-    "age": 35,
-    "income": 55000,
-    "loan_amount": 20000,
-    "loan_tenure_months": 60,
-    "avg_dpd_per_delinquency": 2.5,
-    "delinquency_ratio": 0.12,
-    "credit_utilization_ratio": 0.45,
-    "num_open_accounts": 5,
-    "residence_type": "Owned",
-    "loan_purpose": "Home Renovation",
-    "loan_type": "Personal Loan"
-  }'
-6️⃣ API Validation
-If the JSON request is missing fields, the API should return a 422 Unprocessable Entity error.
-If data types are incorrect, the API should return a 400 Bad Request response.
+```bash
+curl -X 'POST' 'http://localhost:8000/predict' \
+-H 'accept: application/json' \
+-H 'Content-Type: application/json' \
+-d '{
+  "age": 35,
+  "income": 55000,
+  "loan_amount": 20000,
+  "loan_tenure_months": 60,
+  "avg_dpd_per_delinquency": 2.5,
+  "delinquency_ratio": 0.12,
+  "credit_utilization_ratio": 0.45,
+  "num_open_accounts": 5,
+  "residence_type": "Owned",
+  "loan_purpose": "Home Renovation",
+  "loan_type": "Personal Loan"
+}'
+```
+
+---
+
+### **5️⃣ Streamlit UI Preview**
+This project includes a **Streamlit-based web interface** for easy interaction.
+
+![Streamlit UI - Blank](img/credit_risk_modelling_blank.png)  
+![Streamlit UI - Input](img/credit_risk_modelling_input.png)  
+
+- Upload loan details and get an **instant credit risk score**.
+- Powered by **FastAPI backend + ML model**.
+
+---
+
+### **6️⃣ API Documentation (Swagger UI)**
+FastAPI provides an **interactive API documentation** at `/docs`.
+
+![Swagger UI](img/fastapi_swagger_ui.png)
+```
+
+---
+
+### **🚀 Key Fixes & Improvements:**
+✅ **Properly structured** API documentation  
+✅ **Clearly formatted code blocks** for JSON, JavaScript, and cURL  
+✅ **Better readability with sectioning**  
+✅ **Images properly referenced**  
+✅ **Easier to follow UI-API interaction**
+
+Now, **your README will look professional and well-structured**. Let me know if you need any further refinements! 🚀
 ---
 
 ## ** Features**
