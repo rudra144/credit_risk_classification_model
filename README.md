@@ -18,17 +18,21 @@ This project focuses on **predicting credit risk** by identifying **loan default
 - **Dockerized for Scalable Deployment**
 
 ---
-## **🔍 Streamlit UI Preview**
+## Streamlit UI Preview
 This project includes a **Streamlit-based web interface** for easy interaction.
 
-![Streamlit UI](img/Credit Risk Modelling blank.png)
-![Streamlit UI](img/Credit Risk Modelling_input.png)
+![Streamlit UI - Blank](img/credit_risk_modelling_blank.png)
+![Streamlit UI - Input](img/credit_risk_modelling_input.png)
 
 - Upload loan details and get an **instant credit risk score**.
 - Powered by **FastAPI backend + ML model**.
+
 ## API Documentation (Swagger UI)
-FastAPI provides an **interactive API documentation** at `/docs`.  
-![Swagger UI](img/FastAPI - Swagger UI.png)
+FastAPI provides an **interactive API documentation** at `/docs`.
+
+![Swagger UI](img/fastapi_swagger_ui.png)
+
+
 ---
 
 ## ** Project Structure**
