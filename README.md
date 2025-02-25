@@ -159,21 +159,7 @@ curl -X 'POST' 'http://localhost:8000/predict' \
 
 ---
 
-### **5️⃣ Streamlit UI Preview**
-This project includes a **Streamlit-based web interface** for easy interaction.
 
-![Streamlit UI - Blank](img/credit_risk_modelling_blank.png)  
-![Streamlit UI - Input](img/credit_risk_modelling_input.png)  
-
-- Upload loan details and get an **instant credit risk score**.
-- Powered by **FastAPI backend + ML model**.
-
----
-
-### **6️⃣ API Documentation (Swagger UI)**
-FastAPI provides an **interactive API documentation** at `/docs`.
-
-![Swagger UI](img/fastapi_swagger_ui.png)
 ```
 
 ---
