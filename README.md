@@ -21,8 +21,8 @@ This project focuses on **predicting credit risk** by identifying **loan default
 ## Streamlit UI Preview
 This project includes a **Streamlit-based web interface** for easy interaction.
 
-![Streamlit UI - Blank](img/Credit Risk Modelling_input.png)
 ![Streamlit UI - Input](img/credit_risk_modelling_input.png)
+![Streamlit UI - Blank](img/Credit_Risk Modelling_output.png)
 
 - Upload loan details and get an **instant credit risk score**.
 - Powered by **FastAPI backend + ML model**.
